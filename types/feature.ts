@@ -4,4 +4,5 @@ export interface Feature {
   description: string;
   icon: string;
   page_id: number;
+  display_order: number;
 }

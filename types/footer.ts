@@ -1,7 +1,7 @@
-export interface FooterLink {
+export interface Footer {
   id: number;
   type: string;
+  page_id: number;
   label: string;
   url: string;
-  page_id: number;
 }

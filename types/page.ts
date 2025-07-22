@@ -1,7 +1,7 @@
 export interface Page {
   id: number;
-  name: string;
-  logo_url: string;
-  description: string;
-  page_id: number;
+  user_id: number;
+  slug: string;
+  title: string;
+  content: any;
 }
