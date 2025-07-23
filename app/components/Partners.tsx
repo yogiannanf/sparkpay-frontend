@@ -3,13 +3,13 @@
 import React from 'react';
 
 const partners = [
-  { name: 'PT Naratel', logo: '/naratel-logo.svg' }, // pastikan file ini ada di public/
+  { name: 'PT Naratel', logo: '/naratel-logo.svg' },
   { name: 'Vercel', logo: '/vercel.svg' },
 ];
 
 export default function Partners() {
   return (
-    <section className="py-16 bg-gradient-to-br from-green-50 via-white to-yellow-50">
+    <section className="py-20 bg-gradient-to-b from-[#ecfdf5] to-white">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-10">
           Mitra Kami
@@ -18,7 +18,7 @@ export default function Partners() {
           {partners.map((partner, index) => (
             <div
               key={index}
-              className="bg-white bg-opacity-70 p-4 md:p-6 rounded-xl shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center w-40 h-24"
+              className="bg-white bg-opacity-80 p-4 md:p-6 rounded-xl shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center w-40 h-24"
             >
               <img
                 src={partner.logo}

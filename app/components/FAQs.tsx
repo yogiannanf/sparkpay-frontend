@@ -31,16 +31,15 @@ const faqList = [
 
 export default function FAQ() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
   const toggleFAQ = (index: number) => {
     setActiveIndex(index === activeIndex ? null : index);
   };
 
   return (
-    <section className="py-16 bg-gradient-to-br from-green-50 to-yellow-50">
+    <section className="py-16 bg-gradient-to-b from-[#d1fae5] via-white to-[#ecfdf5]">
       <div className="max-w-4xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-green-800 mb-10">
-          Pertanyaan seputar <span className="text-yellow-500">SparkPay</span>
+          Pertanyaan seputar <span className="text-green-600">SparkPay</span>
         </h2>
         <div className="space-y-4">
           {faqList.map((faq, index) => (
@@ -48,8 +47,8 @@ export default function FAQ() {
               key={index}
               className={`border rounded-lg p-4 transition-all shadow-sm ${
                 activeIndex === index
-                  ? 'bg-yellow-100 border-yellow-300'
-                  : 'bg-white border-green-200'
+                  ? 'bg-green-100/60 border-green-400 backdrop-blur-[2px]'
+                  : 'bg-white/90 border-green-200 backdrop-blur-sm'
               }`}
             >
               <button
@@ -58,7 +57,7 @@ export default function FAQ() {
               >
                 <span className="font-medium text-green-800">{faq.question}</span>
                 {activeIndex === index ? (
-                  <ChevronUp className="w-5 h-5 text-yellow-600" />
+                  <ChevronUp className="w-5 h-5 text-green-700" />
                 ) : (
                   <ChevronDown className="w-5 h-5 text-green-600" />
                 )}

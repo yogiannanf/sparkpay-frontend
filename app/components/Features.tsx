@@ -73,7 +73,7 @@ export default function Features() {
   };
 
   return (
-    <section id="features" className="py-20 px-6 md:px-16 bg-green-50 relative">
+    <section id="features" className="py-20 px-6 md:px-16 relative">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-green-800">
         Fitur Unggulan <span className="text-green-600">SparkPay</span>
       </h2>
@@ -106,7 +106,7 @@ export default function Features() {
         {features.map((feature, idx) => (
           <div
             key={idx}
-            className="min-w-[280px] md:min-w-[300px] bg-white p-6 rounded-xl shadow hover:shadow-md transition flex-shrink-0 snap-start border border-green-200"
+            className="min-w-[280px] md:min-w-[300px] bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow hover:shadow-md transition flex-shrink-0 snap-start border border-green-200/60 hover:border-yellow-300/80"
           >
             <div
               className="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-green-100"

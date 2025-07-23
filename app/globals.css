@@ -40,3 +40,20 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.bg-spark-gradient {
+  /* smooth hijau -> kuning yang panjang vertikal */
+  background: linear-gradient(
+    180deg,
+    rgba(240, 253, 244, 1) 0%,   /* green-50-ish */
+    rgba(254, 252, 232, 1) 50%,  /* yellow-50-ish */
+    rgba(254, 249, 195, 1) 100%  /* yellow-200-ish */
+  );
+}
+
+:root {
+  --spark-green: #16a34a;   /* tailwind green-600 */
+  --spark-green-dark: #166534; /* green-800 */
+  --spark-yellow: #facc15;  /* yellow-400 */
+  --spark-yellow-light: #fef9c3; /* yellow-100 */
+}
