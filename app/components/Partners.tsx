@@ -5,7 +5,6 @@ import React from 'react';
 const partners = [
   { name: 'PT Naratel', logo: '/naratel-logo.svg' }, // pastikan file ini ada di public/
   { name: 'Vercel', logo: '/vercel.svg' },
-  { name: 'Next.js', logo: '/next.svg' },
 ];
 
 export default function Partners() {
@@ -13,7 +12,7 @@ export default function Partners() {
     <section className="py-16 bg-gradient-to-br from-green-50 via-white to-yellow-50">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-10">
-          Dipercaya oleh Mitra Terbaik
+          Mitra Kami
         </h2>
         <div className="flex justify-center flex-wrap gap-8 md:gap-12">
           {partners.map((partner, index) => (

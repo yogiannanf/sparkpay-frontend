@@ -11,10 +11,29 @@ export default function Hero() {
       <nav className="w-full px-6 md:px-16 py-5 flex justify-between items-center border-b border-gray-100 bg-white z-10 shadow-sm">
         <div className="text-xl md:text-2xl font-bold text-green-600">SparkPay</div>
         <ul className="hidden md:flex space-x-8 text-gray-700 font-medium">
-          <li><Link href="#produk" className="hover:text-green-600">Produk</Link></li>
-          <li><Link href="#perusahaan" className="hover:text-green-600">Perusahaan</Link></li>
-          <li><Link href="#faq" className="hover:text-green-600">FAQ</Link></li>
-          <li><Link href="#download" className="bg-yellow-400 hover:bg-yellow-500 text-green-900 font-semibold px-4 py-2 rounded-full shadow transition">Download</Link></li>
+          <li>
+            <Link href="#produk" className="hover:text-green-600 transition">
+              Produk
+            </Link>
+          </li>
+          <li>
+            <Link href="#perusahaan" className="hover:text-green-600 transition">
+              Perusahaan
+            </Link>
+          </li>
+          <li>
+            <Link href="#faq" className="hover:text-green-600 transition">
+              FAQ
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="#download"
+              className="bg-yellow-400 hover:bg-yellow-500 text-green-900 font-semibold px-4 py-2 rounded-full shadow transition"
+            >
+              Download
+            </Link>
+          </li>
         </ul>
       </nav>
 
@@ -32,8 +51,7 @@ export default function Hero() {
               transition={{ duration: 0.6 }}
               className="text-4xl md:text-5xl font-extrabold leading-tight text-green-700"
             >
-              Semua Bisa{' '}
-              <span className="text-yellow-400">Transfer Gratis</span>
+              Semua Bisa <span className="text-yellow-400">Transfer Gratis</span>
             </motion.h1>
 
             <motion.p
@@ -57,6 +75,15 @@ export default function Hero() {
               >
                 Download Sekarang
               </a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9 }}
+              className="mt-4 text-gray-400 text-xs md:text-sm"
+            >
+              Terdaftar & diawasi oleh <strong>Bank Indonesia</strong>.
             </motion.div>
           </div>
 

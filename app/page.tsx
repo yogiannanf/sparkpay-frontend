@@ -12,9 +12,9 @@ export default function HomePage() {
       <Hero />
       <CTA />
       <Features />
-      <Partners />
       <Testimonials />
       <FAQs />
+      <Partners />
       <Footer />
     </main>
   );
