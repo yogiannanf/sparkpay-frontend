@@ -36,37 +36,37 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-b from-[#d1fae5] via-white to-[#ecfdf5]">
+    <section className="py-16">
       <div className="max-w-4xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-green-800 mb-10">
           Pertanyaan seputar <span className="text-green-600">SparkPay</span>
         </h2>
         <div className="space-y-4">
           {faqList.map((faq, index) => (
-            <div
-              key={index}
-              className={`border rounded-lg p-4 transition-all shadow-sm ${
-                activeIndex === index
-                  ? 'bg-green-100/60 border-green-400 backdrop-blur-[2px]'
-                  : 'bg-white/90 border-green-200 backdrop-blur-sm'
-              }`}
+          <div
+            key={index}
+            className={`border rounded-lg p-4 transition-all shadow-sm bg-white ${
+              activeIndex === index ? 'shadow-lg' : 'shadow-md'
+            }`}
+          >
+            <button
+              onClick={() => toggleFAQ(index)}
+              className="flex justify-between items-center w-full text-left"
             >
-              <button
-                onClick={() => toggleFAQ(index)}
-                className="flex justify-between items-center w-full text-left"
-              >
-                <span className="font-medium text-green-800">{faq.question}</span>
-                {activeIndex === index ? (
-                  <ChevronUp className="w-5 h-5 text-green-700" />
-                ) : (
-                  <ChevronDown className="w-5 h-5 text-green-600" />
-                )}
-              </button>
-              {activeIndex === index && (
-                <div className="mt-3 text-green-700">{faq.answer}</div>
+              <span className="font-medium text-green-800">{faq.question}</span>
+              {activeIndex === index ? (
+                <ChevronUp className="w-5 h-5 text-green-700" />
+              ) : (
+                <ChevronDown className="w-5 h-5 text-green-600" />
               )}
-            </div>
-          ))}
+            </button>
+            {activeIndex === index && (
+              <div className="mt-3 text-gray-700">
+                {faq.answer}
+              </div>
+            )}
+          </div>
+        ))}
         </div>
       </div>
     </section>

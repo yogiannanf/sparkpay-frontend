@@ -30,7 +30,7 @@ export default function Testimonials() {
     if (containerRef.current) {
       const childWidth = containerRef.current.children[0]?.clientWidth || 0;
       containerRef.current.scrollTo({
-        left: index * (childWidth + 24), // gap-6
+        left: index * (childWidth + 24), // gap-6 = 24px
         behavior: 'smooth',
       });
     }
@@ -40,7 +40,7 @@ export default function Testimonials() {
   const goNext = () => setIndex((prev) => (prev < total - 1 ? prev + 1 : prev));
 
   return (
-    <section className="py-20 px-6 md:px-16 bg-gradient-to-b from-white via-[#ecfdf5] to-[#d1fae5]">
+    <section className="py-20 px-6 md:px-16">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-12">
           Apa Kata Mereka?

@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <header className="relative overflow-hidden bg-gradient-to-b from-[#a7f3d0] to-[#d1fae5]">
+    <header className="relative bg-white overflow-hidden">
       {/* ===== Navbar ===== */}
       <nav className="w-full px-6 md:px-16 py-5 flex justify-between items-center bg-white/70 backdrop-blur-md z-10 shadow-sm">
         <div className="text-xl md:text-2xl font-bold text-green-600">SparkPay</div>
@@ -23,7 +23,7 @@ export default function Hero() {
       </nav>
 
       {/* ===== Hero Content ===== */}
-      <section className="py-24 px-6 md:px-16">
+      <section className="relative z-10 py-24 px-6 md:px-16">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12">
           {/* Left Text */}
           <div className="text-center md:text-left">

@@ -42,14 +42,15 @@ body {
 }
 
 .bg-spark-gradient {
-  /* smooth hijau -> kuning yang panjang vertikal */
   background: linear-gradient(
     180deg,
-    rgba(240, 253, 244, 1) 0%,   /* green-50-ish */
-    rgba(254, 252, 232, 1) 50%,  /* yellow-50-ish */
-    rgba(254, 249, 195, 1) 100%  /* yellow-200-ish */
+    #166534 0%,      /* green-800 */
+    #22c55e 30%,     /* green-500 */
+    #facc15 70%,     /* yellow-400 */
+    #fef9c3 100%     /* yellow-100 */
   );
 }
+
 
 :root {
   --spark-green: #16a34a;   /* tailwind green-600 */
