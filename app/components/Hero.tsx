@@ -1,21 +1,47 @@
 'use client';
 
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function Hero() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className="relative bg-white overflow-hidden">
       {/* ===== Navbar ===== */}
-      <nav className="w-full px-6 md:px-16 py-5 flex justify-between items-center bg-white/70 backdrop-blur-md z-10 shadow-sm">
+      <nav className="w-full px-6 md:px-16 py-5 flex justify-between items-center bg-white/70 backdrop-blur-md z-20 shadow-sm relative">
         <div className="text-xl md:text-2xl font-bold text-green-600">SparkPay</div>
+
+        {/* Hamburger Button (Mobile) */}
+        <div className="md:hidden">
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="text-green-700 focus:outline-none"
+          >
+            {menuOpen ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
+        </div>
+
+        {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 text-gray-700 font-medium items-center">
-          <li><Link href="#produk" className="hover:text-green-600">Produk</Link></li>
-          <li><Link href="#perusahaan" className="hover:text-green-600">Perusahaan</Link></li>
-          <li><Link href="#faq" className="hover:text-green-600">FAQ</Link></li>
+          <li><Link href="/produk" className="hover:text-green-600">Produk</Link></li>
+          <li><Link href="/perusahaan" className="hover:text-green-600">Perusahaan</Link></li>
+          <li><Link href="/faq" className="hover:text-green-600">FAQ</Link></li>
           <li>
-            <Link href="#download" className="bg-green-200 hover:bg-green-300 text-green-900 font-semibold px-4 py-2 rounded-full shadow transition">
+            <Link
+              href="/download"
+              className="bg-green-200 hover:bg-green-300 text-green-900 font-semibold px-4 py-2 rounded-full shadow transition"
+            >
               Download
             </Link>
           </li>
@@ -52,12 +78,12 @@ export default function Hero() {
               transition={{ delay: 0.6 }}
               className="mt-8 flex justify-center md:justify-start"
             >
-              <a
-                href="#download"
+              <Link
+                href="/download"
                 className="bg-white hover:bg-emerald-100 text-green-700 font-semibold px-6 py-3 rounded-full text-sm md:text-base transition shadow-lg"
               >
                 Download Sekarang
-              </a>
+              </Link>
             </motion.div>
           </div>
 

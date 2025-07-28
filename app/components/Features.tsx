@@ -56,7 +56,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="py-20 bg-transparent">
+    <section id="fitur" className="py-20 bg-transparent">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold text-green-900 mb-12">Fitur Unggulan</h2>
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
