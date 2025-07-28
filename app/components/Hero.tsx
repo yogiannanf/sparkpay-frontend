@@ -34,12 +34,12 @@ export default function Hero() {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 text-gray-700 font-medium items-center">
-          <li><Link href="/produk" className="hover:text-green-600">Produk</Link></li>
-          <li><Link href="/perusahaan" className="hover:text-green-600">Perusahaan</Link></li>
-          <li><Link href="/faq" className="hover:text-green-600">FAQ</Link></li>
+          <li><Link href="/navbar/produk" className="hover:text-green-600">Produk</Link></li>
+          <li><Link href="/navbar/perusahaan" className="hover:text-green-600">Perusahaan</Link></li>
+          <li><Link href="/navbar/faq" className="hover:text-green-600">FAQ</Link></li>
           <li>
             <Link
-              href="/download"
+              href="/navbar/download"
               className="bg-green-200 hover:bg-green-300 text-green-900 font-semibold px-4 py-2 rounded-full shadow transition"
             >
               Download
@@ -54,43 +54,47 @@ export default function Hero() {
           {/* Left Text */}
           <div className="text-center md:text-left">
             <motion.h1
-              initial={{ opacity: 0, y: -30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-4xl md:text-5xl font-extrabold leading-tight text-green-700"
-            >
-              Semua Bisa{' '}
-              <span className="text-emerald-500">Transfer Gratis</span>
-            </motion.h1>
+  initial={{ opacity: 0, y: -30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: false, amount: 0.8 }} // <- aktif setiap terlihat
+  transition={{ duration: 0.6 }}
+  className="text-4xl md:text-5xl font-extrabold leading-tight text-green-700"
+>
+  Semua Bisa{' '}
+  <span className="text-emerald-500">Transfer Gratis</span>
+  </motion.h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="mt-4 text-gray-700 text-lg md:text-xl max-w-md"
-            >
-              Transfer antar bank, bayar tagihan, dan top-up e-wallet kini cukup dari satu aplikasi: SparkPay.
-            </motion.p>
+  <motion.p
+    initial={{ opacity: 0, y: 10 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: false, amount: 0.8 }}
+    transition={{ delay: 0.3 }}
+    className="mt-4 text-gray-700 text-lg md:text-xl max-w-md"
+  >
+    Transfer antar bank, bayar tagihan, dan top-up e-wallet kini cukup dari satu aplikasi: SparkPay.
+  </motion.p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="mt-8 flex justify-center md:justify-start"
-            >
-              <Link
-                href="/download"
-                className="bg-white hover:bg-emerald-100 text-green-700 font-semibold px-6 py-3 rounded-full text-sm md:text-base transition shadow-lg"
-              >
-                Download Sekarang
-              </Link>
-            </motion.div>
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: false, amount: 0.8 }}
+    transition={{ delay: 0.6 }}
+    className="mt-8 flex justify-center md:justify-start"
+  >
+    <Link
+      href="/navbar/download"
+      className="bg-white hover:bg-emerald-100 text-green-700 font-semibold px-6 py-3 rounded-full text-sm md:text-base transition shadow-lg"
+    >
+      Download Sekarang
+    </Link>
+  </motion.div>
           </div>
 
           {/* Right Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: false, amount: 0.6 }}
             transition={{ delay: 0.8 }}
             className="flex justify-center md:justify-end"
           >
