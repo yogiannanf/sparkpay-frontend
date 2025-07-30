@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-export default function KaptenNaratelPage() {
+export default function NgomongoPage() {
   return (
     <div className="min-h-screen w-full bg-gradient-to-b from-green-200 via-yellow-50 to-yellow-100 py-14 px-6 flex justify-center">
       <motion.div
@@ -25,14 +25,14 @@ export default function KaptenNaratelPage() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div className="flex-1">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-green-800 mb-2">Kapten Naratel</h1>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-green-800 mb-2">Ngomongo</h1>
             <p className="text-gray-700 text-lg">
-              Layanan komunikasi dan internet terbaik dari Naratel untuk rumah dan bisnis Anda. Solusi cepat, stabil, dan aman!
+              Platform komunikasi cerdas lokal berbasis suara dan AI, mendukung interaksi bisnis, edukasi, dan layanan publik.
             </p>
           </div>
           <img
-            src="/images/kapten.png"
-            alt="Kapten Naratel Logo"
+            src="/images/ngomongo.png"
+            alt="Ngomongo Logo"
             className="w-28 h-28 object-contain rounded-lg shadow-md"
           />
         </div>
@@ -42,34 +42,34 @@ export default function KaptenNaratelPage() {
 
         {/* Fitur */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-green-700 mb-4">🚀 Layanan Utama</h2>
+          <h2 className="text-2xl font-semibold text-green-700 mb-4">🔍 Fitur Unggulan</h2>
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-800">
-            <li className="bg-green-50 rounded-lg px-4 py-3">🌐 Internet Cepat & Stabil</li>
-            <li className="bg-green-50 rounded-lg px-4 py-3">📞 Telepon & Pusat Layanan</li>
-            <li className="bg-green-50 rounded-lg px-4 py-3">📡 Solusi Jaringan Khusus Bisnis</li>
-            <li className="bg-green-50 rounded-lg px-4 py-3">🔧 Layanan Bantuan 24/7</li>
+            <li className="bg-green-50 rounded-lg px-4 py-3">🎙️ Voice-to-Text Bahasa Indonesia</li>
+            <li className="bg-green-50 rounded-lg px-4 py-3">🤖 Asisten Virtual Meeting</li>
+            <li className="bg-green-50 rounded-lg px-4 py-3">📲 Integrasi WhatsApp & Telegram</li>
+            <li className="bg-green-50 rounded-lg px-4 py-3">📊 Analisis Data Percakapan</li>
           </ul>
         </section>
 
         {/* Manfaat */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-green-700 mb-4">🎯 Keunggulan Kapten Naratel</h2>
+          <h2 className="text-2xl font-semibold text-green-700 mb-4">✅ Manfaat untuk Bisnis dan Edukasi</h2>
           <ul className="list-disc pl-6 text-gray-700 space-y-2">
-            <li>Koneksi internet rumah dan kantor yang cepat dan stabil</li>
-            <li>Dukungan teknis profesional kapan saja</li>
-            <li>Jangkauan luas dengan paket yang fleksibel</li>
+            <li>Meningkatkan efisiensi komunikasi tim</li>
+            <li>Mempermudah pencatatan notulensi otomatis</li>
+            <li>Mendukung guru dan siswa dalam pembelajaran daring</li>
           </ul>
         </section>
 
         {/* Testimoni */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-green-700 mb-4">💬 Testimoni Pelanggan</h2>
+          <h2 className="text-2xl font-semibold text-green-700 mb-4">💬 Testimoni Pengguna</h2>
           <div className="space-y-4">
             <blockquote className="bg-white border-l-4 border-green-600 pl-4 py-2 text-gray-800 italic shadow-sm">
-              “Sejak pakai Naratel, koneksi internet di rumah selalu lancar. Mantap!”
+              “Ngomongo membantu saya mencatat semua isi rapat secara otomatis tanpa repot.”
             </blockquote>
             <blockquote className="bg-white border-l-4 border-green-600 pl-4 py-2 text-gray-800 italic shadow-sm">
-              “Layanan cepat, teknisi responsif, dan kualitas bagus. Rekomendasi banget.”
+              “Solusi lokal yang powerful dan mudah dipakai. Keren banget!”
             </blockquote>
           </div>
         </section>
@@ -77,17 +77,17 @@ export default function KaptenNaratelPage() {
         {/* Lokasi */}
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-green-700 mb-4">📍 Alamat Kantor</h2>
-          <p className="text-gray-700">Jl. Tidar No. 23, Malang, Jawa Timur</p>
+          <p className="text-gray-700">Jl. Veteran No.3A, Kota Malang, Jawa Timur</p>
         </section>
 
         {/* CTA */}
         <div className="text-center mt-12">
           <Link
-            href="https://kaptennaratel.com"
+            href="https://ngomongo.id"
             target="_blank"
             className="bg-green-700 hover:bg-green-800 text-white px-8 py-3 rounded-full text-lg font-medium transition"
           >
-            Kunjungi Situs Kapten Naratel
+            Kunjungi Situs Ngomongo
           </Link>
         </div>
       </motion.div>

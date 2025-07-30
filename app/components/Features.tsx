@@ -2,57 +2,39 @@
 
 import React from 'react';
 import {
-  MdBolt,
-  MdLock,
-  MdTouchApp,
-  MdAccountBalanceWallet,
   MdPayment,
-  MdCardGiftcard,
-  MdHistory,
-  MdQrCodeScanner,
+  MdExtension,
+  MdUpdate,
+  MdDashboard,
+  MdSecurity,
 } from 'react-icons/md';
 import { motion } from 'framer-motion';
 
 const features = [
   {
-    icon: <MdBolt className="text-4xl text-green-600 group-hover:scale-110 transition-transform" />,
-    title: 'Pembayaran Cepat',
-    desc: 'Transaksi instan ke semua bank nasional.',
-  },
-  {
-    icon: <MdLock className="text-4xl text-green-600 group-hover:scale-110 transition-transform" />,
-    title: 'Aman & Terpercaya',
-    desc: 'Sistem keamanan berlapis dan terenkripsi.',
-  },
-  {
-    icon: <MdTouchApp className="text-4xl text-green-600 group-hover:scale-110 transition-transform" />,
-    title: 'Mudah Digunakan',
-    desc: 'Desain ramah pengguna & intuitif.',
-  },
-  {
-    icon: <MdAccountBalanceWallet className="text-4xl text-green-600 group-hover:scale-110 transition-transform" />,
-    title: 'Top-up E-Wallet',
-    desc: 'Isi saldo OVO, GoPay, Dana, dan lainnya.',
-  },
-  {
     icon: <MdPayment className="text-4xl text-green-600 group-hover:scale-110 transition-transform" />,
-    title: 'Bayar Tagihan',
-    desc: 'Listrik, PDAM, internet, dan lainnya.',
+    title: 'Metode Pembayaran Lengkap',
+    desc: 'Dukung berbagai kanal pembayaran seperti QRIS, transfer bank, e-wallet, dan kartu kredit.',
   },
   {
-    icon: <MdCardGiftcard className="text-4xl text-green-600 group-hover:scale-110 transition-transform" />,
-    title: 'Promo & Cashback',
-    desc: 'Nikmati promo spesial dan cashback.',
+    icon: <MdExtension className="text-4xl text-green-600 group-hover:scale-110 transition-transform" />,
+    title: 'Integrasi Mudah',
+    desc: 'Tersedia plugin & API yang cepat diimplementasikan ke sistem Anda.',
   },
   {
-    icon: <MdHistory className="text-4xl text-green-600 group-hover:scale-110 transition-transform" />,
-    title: 'Riwayat Transaksi',
-    desc: 'Pantau transaksi harian dan bulanan.',
+    icon: <MdUpdate className="text-4xl text-green-600 group-hover:scale-110 transition-transform" />,
+    title: 'Settlement Harian Otomatis',
+    desc: 'Dana langsung dikirim ke rekening Anda setiap hari secara otomatis.',
   },
   {
-    icon: <MdQrCodeScanner className="text-4xl text-green-600 group-hover:scale-110 transition-transform" />,
-    title: 'Transfer QRIS',
-    desc: 'Kirim & bayar pakai kode QR semua merchant.',
+    icon: <MdDashboard className="text-4xl text-green-600 group-hover:scale-110 transition-transform" />,
+    title: 'Dashboard Real-Time',
+    desc: 'Pantau transaksi dan statistik bisnis Anda secara langsung & menyeluruh.',
+  },
+  {
+    icon: <MdSecurity className="text-4xl text-green-600 group-hover:scale-110 transition-transform" />,
+    title: 'Keamanan Berlapis',
+    desc: 'Dilengkapi standar PCI-DSS & 3D Secure untuk perlindungan maksimal.',
   },
 ];
 
