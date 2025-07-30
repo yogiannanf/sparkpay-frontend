@@ -1,17 +1,18 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
-const fadeInUp = {
+const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 40 },
-  visible: {
+  visible: (i: number) => ({
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.6,
-      ease: 'easeOut'
+      delay: i * 0.2,
+      ease: [0.25, 0.1, 0.25, 1]
     }
-  }
+  })
 };
 
 export default function HowItWorks() {
@@ -43,6 +44,7 @@ export default function HowItWorks() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
+          custom={0}
         >
           Bagaimana Cara Kerjanya?
         </motion.h2>
@@ -52,6 +54,7 @@ export default function HowItWorks() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
+          custom={1}
         >
           Proses sederhana dari pelanggan hingga uang masuk ke merchant.
         </motion.p>
@@ -65,6 +68,7 @@ export default function HowItWorks() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: false, amount: 0.3 }}
+              custom={index + 2}
             >
               <h3 className="text-xl font-semibold mb-2 text-white">{step.title}</h3>
               <p className="text-sm text-gray-300">{step.desc}</p>
