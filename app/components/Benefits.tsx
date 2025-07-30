@@ -4,7 +4,7 @@ import { Variants, motion } from 'framer-motion';
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({
+  visible: (i = 0) => ({
     opacity: 1,
     y: 0,
     transition: {
@@ -14,7 +14,6 @@ const fadeInUp: Variants = {
     },
   }),
 };
-
 
 export default function Benefits() {
   const benefits = [
