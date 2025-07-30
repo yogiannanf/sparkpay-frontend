@@ -1,7 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { Variants, easeOut } from 'framer-motion';
+import { motion, Variants, easeOut } from 'framer-motion';
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 30 },
@@ -15,7 +14,6 @@ const fadeInUp: Variants = {
     },
   }),
 };
-
 
 export default function ForWhom() {
   const targets = [
@@ -34,8 +32,8 @@ export default function ForWhom() {
           initial="hidden"
           whileInView="visible"
           custom={0}
-          viewport={{ once: true }}
           variants={fadeInUp}
+          viewport={{ once: false, amount: 0.3 }}
         >
           Untuk Siapa Layanan Ini?
         </motion.h2>
@@ -48,8 +46,8 @@ export default function ForWhom() {
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
-              custom={index + 1} // Tambahkan +1 agar delay tidak sama dengan h2
+              viewport={{ once: false, amount: 0.3 }}
+              custom={index + 1}
             >
               {item}
             </motion.div>
